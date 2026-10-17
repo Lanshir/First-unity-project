@@ -2,20 +2,19 @@ using UnityEngine;
 
 public class ScoreCounterScript : MonoBehaviour
 {
-    private GameLogicScript gameLogic;
+    private GameStateManagerScript _gameState;
 
     void Start()
     {
-        gameLogic = GameObject
-            .FindGameObjectWithTag("GameLogic")
-            .GetComponent<GameLogicScript>();
+        _gameState = Helpers.GetGameStateManager();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == 3)
+        if (collision.gameObject.layer == Constants.Layers.Player
+            && _gameState.player.isAlive)
         {
-            gameLogic.IncrementPlayerScore();
+            _gameState.IncrementPlayerScore();
         }
     }
 }

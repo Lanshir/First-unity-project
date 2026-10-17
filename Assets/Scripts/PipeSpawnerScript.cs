@@ -36,20 +36,11 @@ public class PipeSpawnerScript : MonoBehaviour
 
         // Never spawn in middle.
         while (randomY == 0)
-            randomY = RandomWithStep(_minY, _maxY, offsetRandomStep);
+            randomY = Helpers.RandomWithStep(_minY, _maxY, offsetRandomStep);
 
         var spawnPosition = new Vector3(transform.position.x, randomY, 0);
 
         Instantiate(pipeColumn, spawnPosition, transform.rotation);
         _spawnTimer = 0;
-    }
-
-    private float RandomWithStep(float min, float max, float step)
-    {
-        int totalSteps = Mathf.FloorToInt((max - min) / step);
-        int randomStep = Random.Range(0, totalSteps + 1);
-        float value = min + (randomStep * step);
-
-        return value;
     }
 }
