@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0981787ce71f39d4d852689a30e6cfa1, type: 3}
+  m_Name: PlayerState
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerStateObject
+  initialScore: 0
+  initialIsAlive: 1
+  score: 0
+  isAlive: 1

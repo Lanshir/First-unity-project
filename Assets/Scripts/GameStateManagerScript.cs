@@ -1,11 +1,13 @@
-using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class GameStateManagerScript : MonoBehaviour
 {
-    public PlayerState player = new();
+    public PlayerStateObject player;
+
+    public PanelRenderer gameOverPanel;
 
     [ContextMenu("Increase player score")]
     public void IncrementPlayerScore()
@@ -23,12 +25,15 @@ public class GameStateManagerScript : MonoBehaviour
     public void GameOver()
     {
         player.isAlive = false;
+        gameOverPanel.enabled = true;
     }
 
     private void Start()
     {
+        player.ResetToInitial();
+
         // Short pause before game start.
-        StartCoroutine(FreezeGame(1));
+        StartCoroutine(FreezeGame(1.5f));
     }
 
     private IEnumerator FreezeGame(float seconds)
@@ -41,11 +46,4 @@ public class GameStateManagerScript : MonoBehaviour
 
         Time.timeScale = gameTimeScale;
     }
-}
-
-[Serializable]
-public class PlayerState
-{
-    public int score = 0;
-    public bool isAlive = true;
 }

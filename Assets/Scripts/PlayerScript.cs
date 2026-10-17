@@ -7,12 +7,10 @@ public class YobaBehaviourScript : MonoBehaviour
     public float jumpStrength = 6;
 
     private GameStateManagerScript _gameState;
-    private PlayerState _player;
 
     void Start()
     {
         _gameState = Helpers.GetGameStateManager();
-        _player = _gameState.player;
     }
 
     void Update()
@@ -24,8 +22,10 @@ public class YobaBehaviourScript : MonoBehaviour
             return;
         }
 
+        // Jump.
         if (Keyboard.current.spaceKey.wasPressedThisFrame
-            && _player.isAlive)
+            && _gameState.player.isAlive
+            && Time.timeScale > 0)
         {
             yobaRigidBody.linearVelocity = Vector2.up * jumpStrength;
         }
