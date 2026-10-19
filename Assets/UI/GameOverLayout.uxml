@@ -1,16 +1,17 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/GameOverLayoutStyles.uss?fileID=7433441132597879392&amp;guid=76ce248bbe21d9448ac735f89908f7bf&amp;type=3#GameOverLayoutStyles"/>
     <ui:VisualElement name="GameOverScreen" data-source="project://database/Assets/Scripts/Objects/PlayerState.asset?fileID=11400000&amp;guid=6a83f847da12c134a888c856a02cd251&amp;type=2#PlayerState" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0.376); justify-content: center; align-items: center;">
-        <ui:VisualElement name="MenuContainer" style="flex-grow: 0; background-color: rgb(0, 0, 0); width: 600px; height: auto; flex-shrink: 0; align-items: center; padding-top: 36px; padding-left: 36px; padding-right: 36px; padding-bottom: 36px; border-top-left-radius: 16px; border-top-right-radius: 16px; border-bottom-right-radius: 16px; border-bottom-left-radius: 16px;">
-            <ui:Label text="You Died" name="Label" double-click-selects-word="false" display-tooltip-when-elided="false" triple-click-selects-line="false" enable-rich-text="false" emoji-fallback-support="false" style="color: rgb(180, 0, 0); font-size: 64px; -unity-font-style: bold; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; height: 77px;"/>
+        <ui:VisualElement name="MenuContainer" style="flex-grow: 0; width: 600px; height: auto; flex-shrink: 0; align-items: center; padding-top: 36px; padding-left: 36px; padding-right: 36px; padding-bottom: 36px; border-top-left-radius: 16px; border-top-right-radius: 16px; border-bottom-right-radius: 16px; border-bottom-left-radius: 16px;">
+            <ui:Label text="You Died" name="Label" style="font-size: 64px; -unity-font-style: bold;"/>
             <ui:VisualElement name="ScoreContainer" style="flex-grow: 1; flex-direction: row;">
-                <ui:Label text="Your score:" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 8px; padding-bottom: 0; padding-left: 0; color: rgb(180, 0, 0); font-size: 24px;"/>
-                <ui:Label text="" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; color: rgb(180, 0, 0); font-size: 24px;">
+                <ui:Label text="Your score:" style="padding-top: 0; padding-right: 8px; padding-bottom: 0; padding-left: 0;"/>
+                <ui:Label text="">
                     <Bindings>
                         <ui:DataBinding property="text" data-source-path="score" binding-mode="ToTarget"/>
                     </Bindings>
                 </ui:Label>
             </ui:VisualElement>
-            <ui:Button text="Try again" name="RetryButton" style="border-top-left-radius: 8px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px; padding-top: 8px; padding-bottom: 8px; margin-top: 24px; margin-right: 0; margin-bottom: 0; margin-left: 0; font-size: 24px; width: 240px; border-left-color: rgb(180, 0, 0); border-right-color: rgb(180, 0, 0); border-top-color: rgb(180, 0, 0); border-bottom-color: rgb(180, 0, 0); border-top-width: 4px; border-right-width: 4px; border-bottom-width: 4px; border-left-width: 4px; color: rgb(180, 0, 0); background-color: rgba(0, 0, 0, 0);"/>
+            <ui:Button text="Try again" name="RetryButton" style="padding-top: 8px; padding-bottom: 8px; margin-top: 24px; margin-right: 0; margin-bottom: 0; margin-left: 0; width: 240px;"/>
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

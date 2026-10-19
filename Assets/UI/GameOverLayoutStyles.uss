@@ -1,0 +1,35 @@
+:root {
+    --game-over-red: rgb(180, 0, 0);
+    --game-over-red-a30: rgba(180, 0, 0, 0.3);
+    --game-over-bg: rgb(0, 0, 0);
+    --font-medium: 24px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+Label {
+    color: var(--game-over-red);
+    font-size: var(--font-medium);
+}
+
+Button {
+    font-size: var(--font-medium);
+    color: var(--game-over-red);
+    background-color: var(--game-over-bg);
+    border-color: var(--game-over-red);
+    border-radius: 8px;
+    border-width: 4px;
+}
+
+#MenuContainer {
+    background-color: var(--game-over-bg);
+}
+
+#RetryButton:hover {
+    color: white;
+    background-color: var(--game-over-red-a30);
+    border-color: var(--game-over-red-a30);
+}

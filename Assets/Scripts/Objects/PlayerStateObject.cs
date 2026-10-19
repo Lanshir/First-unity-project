@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "PlayerStateObject", menuName = "Scriptable Objects/PlayerStateObject")]

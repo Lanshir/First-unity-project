@@ -28,10 +28,13 @@ public class GameStateManagerScript : MonoBehaviour
         gameOverPanel.enabled = true;
     }
 
-    private void Start()
+    private void OnEnable()
     {
         player.ResetToInitial();
+    }
 
+    private void Start()
+    {
         // Short pause before game start.
         StartCoroutine(FreezeGame(1.5f));
     }
