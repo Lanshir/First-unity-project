@@ -1,6 +1,6 @@
 :root {
     --game-over-red: rgb(180, 0, 0);
-    --game-over-red-a30: rgba(180, 0, 0, 0.3);
+    --game-over-red-a10: rgba(180, 0, 0, 0.1);
     --game-over-bg: rgb(0, 0, 0);
     --font-medium: 24px;
 }
@@ -22,14 +22,15 @@ Button {
     border-color: var(--game-over-red);
     border-radius: 8px;
     border-width: 4px;
+    margin-top: 18px;
+    padding: 8px 16px;
+    width: 240px;
+}
+
+Button:hover {
+    background-color: var(--game-over-red-a10);
 }
 
 #MenuContainer {
     background-color: var(--game-over-bg);
-}
-
-#RetryButton:hover {
-    color: white;
-    background-color: var(--game-over-red-a30);
-    border-color: var(--game-over-red-a30);
 }

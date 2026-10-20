@@ -24,7 +24,9 @@ public class GameOverUIScript : MonoBehaviour
     private void OnPanelReloadCallback(PanelRenderer panel, VisualElement root)
     {
         var retryButton = root.Q<Button>("RetryButton");
+        var quitButton = root.Q<Button>("QuitButton");
 
         retryButton.clicked += _gameState.RestartGame;
+        quitButton.clicked += _gameState.QuitToStartingScreen;
     }
 }

@@ -24,6 +24,7 @@ public static class Constants
     /// </summary>
     public static class Scenes
     {
-        public const string Main = "MainScene";
+        public const string Gameplay = "GameplayScene";
+        public const string StartingMenu = "StartingMenuScene";
     }
 }

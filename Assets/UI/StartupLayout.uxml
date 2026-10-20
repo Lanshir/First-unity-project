@@ -1,0 +1,10 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/StartupLayoutStyles.uss?fileID=7433441132597879392&amp;guid=968ea9a940e79b04eb1de960cb064794&amp;type=3#StartupLayoutStyles"/>
+    <ui:VisualElement name="StartupContainer" style="flex-grow: 1; align-items: center; justify-content: center;">
+        <ui:VisualElement name="MenuContainer" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0.706); width: 480px; flex-shrink: 0; padding-top: 36px; padding-right: 48px; padding-bottom: 36px; padding-left: 48px;">
+            <ui:Label text="Creative Game Title" name="TitleLable" style="color: rgb(255, 255, 255); font-size: 78px; -unity-text-outline-width: 2px; -unity-font-style: bold; position: absolute; top: -128px; align-self: center; -unity-text-outline-color: rgb(0, 0, 0);"/>
+            <ui:Button text="Start" name="StartButton"/>
+            <ui:Button text="Quit" name="QuitButton"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

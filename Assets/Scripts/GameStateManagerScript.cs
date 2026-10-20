@@ -18,7 +18,7 @@ public class GameStateManagerScript : MonoBehaviour
     [ContextMenu("Restart Game")]
     public void RestartGame()
     {
-        SceneManager.LoadScene(Constants.Scenes.Main);
+        SceneManager.LoadScene(Constants.Scenes.Gameplay);
     }
 
     [ContextMenu("Game Over")]
@@ -26,6 +26,12 @@ public class GameStateManagerScript : MonoBehaviour
     {
         player.isAlive = false;
         gameOverPanel.enabled = true;
+    }
+
+    public void QuitToStartingScreen()
+    {
+        player.ResetToInitial();
+        SceneManager.LoadScene(Constants.Scenes.StartingMenu);
     }
 
     private void OnEnable()

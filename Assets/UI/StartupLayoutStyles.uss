@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+Button {
+    color: white;
+    font-size: 24px;
+    -unity-font-style: bold;
+    padding: 8px 16px;
+    margin: 16px 0;
+    border-radius: 8px;
+    border-width: 2px;
+    border-color: white;
+    background-color: transparent;
+}
+
+Button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#MenuContainer {
+    border-radius: 16px;
+    padding: 24px 48px;
+}
