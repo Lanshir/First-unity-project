@@ -42,7 +42,7 @@ public class GameStateManagerScript : MonoBehaviour
     private void Start()
     {
         // Short pause before game start.
-        StartCoroutine(FreezeGame(1.5f));
+        StartCoroutine(FreezeGame(1));
     }
 
     private IEnumerator FreezeGame(float seconds)
