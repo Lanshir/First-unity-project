@@ -12,7 +12,7 @@ public class ScoreCounterScript : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.layer == Constants.Layers.Player
-            && _gameState.player.isAlive)
+            && _gameState.player.IsAlive)
         {
             _gameState.IncrementPlayerScore();
         }

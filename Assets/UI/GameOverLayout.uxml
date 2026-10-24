@@ -5,9 +5,9 @@
             <ui:Label text="You Died" name="Label" style="font-size: 64px; -unity-font-style: bold;"/>
             <ui:VisualElement name="ScoreContainer" style="flex-grow: 1; flex-direction: row;">
                 <ui:Label text="Your score:" style="padding-top: 0; padding-right: 8px; padding-bottom: 0; padding-left: 0;"/>
-                <ui:Label text="">
+                <ui:Label text="99">
                     <Bindings>
-                        <ui:DataBinding property="text" data-source-path="score" binding-mode="ToTarget"/>
+                        <ui:DataBinding property="text" data-source-path="Score" binding-mode="ToTarget"/>
                     </Bindings>
                 </ui:Label>
             </ui:VisualElement>

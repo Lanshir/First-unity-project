@@ -12,7 +12,7 @@ public class GameStateManagerScript : MonoBehaviour
     [ContextMenu("Increase player score")]
     public void IncrementPlayerScore()
     {
-        player.score++;
+        player.Score++;
     }
 
     [ContextMenu("Restart Game")]
@@ -24,7 +24,7 @@ public class GameStateManagerScript : MonoBehaviour
     [ContextMenu("Game Over")]
     public void GameOver()
     {
-        player.isAlive = false;
+        player.IsAlive = false;
         gameOverPanel.enabled = true;
     }
 

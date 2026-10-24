@@ -1,9 +1,9 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <ui:VisualElement name="GameLayoutContainer" data-source="project://database/Assets/Scripts/Objects/PlayerState.asset?fileID=11400000&amp;guid=6a83f847da12c134a888c856a02cd251&amp;type=2#PlayerState" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
         <ui:VisualElement name="ScoreContainer" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); padding-left: 48px; padding-right: 36px; padding-top: 36px;">
-            <ui:Label name="ScoreText" enable-rich-text="false" data-source-path="" display-tooltip-when-elided="false" triple-click-selects-line="false" double-click-selects-word="false" text="999" style="-unity-font-style: bold; color: rgb(240, 240, 240); font-size: 56px; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; -unity-text-outline-width: 1px; -unity-text-outline-color: rgb(0, 0, 0);">
+            <ui:Label name="ScoreText" enable-rich-text="false" display-tooltip-when-elided="false" triple-click-selects-line="false" double-click-selects-word="false" style="-unity-font-style: bold; color: rgb(240, 240, 240); font-size: 56px; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; -unity-text-outline-width: 1px; -unity-text-outline-color: rgb(0, 0, 0);">
                 <Bindings>
-                    <ui:DataBinding property="text" data-source-path="score" binding-mode="ToTarget"/>
+                    <ui:DataBinding property="text" data-source-path="Score" binding-mode="ToTarget"/>
                 </Bindings>
             </ui:Label>
         </ui:VisualElement>

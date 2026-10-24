@@ -24,7 +24,7 @@ public class YobaBehaviourScript : MonoBehaviour
 
         // Jump.
         if (Keyboard.current.spaceKey.wasPressedThisFrame
-            && _gameState.player.isAlive
+            && _gameState.player.IsAlive
             && Time.timeScale > 0)
         {
             yobaRigidBody.linearVelocity = Vector2.up * jumpStrength;
