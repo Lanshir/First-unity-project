@@ -27,4 +27,12 @@ public static class Constants
         public const string Gameplay = "GameplayScene";
         public const string StartingMenu = "StartingMenuScene";
     }
+
+    /// <summary>
+    /// Флаги анимаций.
+    /// </summary>
+    public static class Animations
+    {
+        public const string IsJumping = "IsJumping";
+    }
 }

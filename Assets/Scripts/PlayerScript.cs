@@ -4,6 +4,8 @@ using UnityEngine.InputSystem;
 public class YobaBehaviourScript : MonoBehaviour
 {
     public Rigidbody2D yobaRigidBody;
+    public Animator animator;
+    public GameObject flameParticles;
     public float jumpStrength = 6;
 
     private GameStateManagerScript _gameState;
@@ -28,10 +30,21 @@ public class YobaBehaviourScript : MonoBehaviour
             && Time.timeScale > 0)
         {
             yobaRigidBody.linearVelocity = Vector2.up * jumpStrength;
+
+            animator.SetBool(Constants.Animations.IsJumping, true);
+
+            var flame = Instantiate(flameParticles, transform.position, flameParticles.transform.rotation);
+            flame.transform.parent = transform;
+            flame.transform.localScale = flameParticles.transform.localScale;
+            flame.transform.localPosition = new Vector3(-0.9f, -3.6f, 0);
+        }
+        else
+        {
+            animator.SetBool(Constants.Animations.IsJumping, false);
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D _)
+    void OnCollisionEnter2D(Collision2D _)
     {
         _gameState.GameOver();
     }
